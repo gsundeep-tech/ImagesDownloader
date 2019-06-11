@@ -96,7 +96,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     
     start_time = time.time()
-    
+    print("[Info] program started...")
     # Reading the data from the file
     data = readFileContents(args.fileLocation, args.verbose)
     
