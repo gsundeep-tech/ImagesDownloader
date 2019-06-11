@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Images list</h1>
+            </div>
+            <hr>
+            <ul>
+                {% for image_name in image_names %}
+                <li><a href="{{url_for('send_image', filename=image_name)}}">{{image_name}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
