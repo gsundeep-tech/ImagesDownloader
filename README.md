@@ -1,6 +1,8 @@
 # ImagesDownloader
 
-downloader.py is a python program for downloading the bulk images from a given text file into a specific folder. Program uses the multi threading to speed up the download process
+Project contains two parts 
+1. downloader.py is a python program for downloading the bulk images from a given text file into a specific folder. Program uses the multi threading to speed up the download process
+2. app.py serves the downloaded images through a simple HTTP flask server
 
 This project is hosted at: [https://github.com/gsundeep-tech/ImagesDownloader](https://github.com/gsundeep-tech/ImagesDownloader).
 
@@ -10,6 +12,8 @@ This project is hosted at: [https://github.com/gsundeep-tech/ImagesDownloader](h
 - [argparse](https://pypi.python.org/pypi/argparse)
 
 ## Usage
+
+For downloading the images:
 
       python downloader.py --file <dataset_location> --verbose <True/False> \
                            --threads <Number_Of_Threads> --save <save_location>
@@ -29,6 +33,14 @@ This project is hosted at: [https://github.com/gsundeep-tech/ImagesDownloader](h
                                Default value: ./images
 </pre>
 
+For Running the flask application
+
+    python app.py
+    
+    Route: /
+      returns the images in the thumbnail format. 
+    Route: /list
+      returns the images as a list with hyperlinks.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
