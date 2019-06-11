@@ -86,7 +86,7 @@ if __name__ == '__main__':
     parser.add_argument('-f', '--file', dest='fileLocation', 
                         help='Input text file location', required=True)
 
-    parser.add_argument('--save', dest='saveLocation', 
+    parser.add_argument('-s', '--save', dest='saveLocation', 
                         help='Save folder Location', default='./images')
 
     parser.add_argument('-t', '--threads', dest='threadsCount', help="Number of threads", default=5, type=int)
